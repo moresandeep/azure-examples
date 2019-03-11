@@ -43,11 +43,18 @@ setx AZURE_STORAGE_ACCESS_KEY "<youraccountkey>"
 setx STORAGE_CONTAINER_NAME "<yourcontainername>"
 setx STORAGE_BLOB_NAME "<yourblobname>"
 ```
+## SAS Token types
+There are two types of SAS Tokens
+* [Service token](https://msdn.microsoft.com/library/dn140255.aspx)
+* [Account token](https://msdn.microsoft.com/library/mt584140.aspx)
 
+### SAS Service Token Example
+The java class `SASServiceTokenPOC` contains an example of how to create a SAS Service token and then creates, downloads and deletes a test blob from the provided
+ `AZURE_STORAGE_ACCOUNT` (storage account) and `STORAGE_CONTAINER_NAME` (container name).
+ 
+### SAS Account Token Example
+The java class `SASAccountTokenPOC` contains an example of how to create a SAS Account token.
 
-## Build / Run
-
-To build and run execute the command `mvn compile exec:java` this should run the POC.
 
 ## Reference
 * [storage-blobs-java-v10-quickstart](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart/blob/master/README.md)
